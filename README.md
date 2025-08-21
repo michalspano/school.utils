@@ -14,3 +14,5 @@ level_root=$(./find_root.sh) || { echo "Error: Failed to run find_root.sh"; exit
 ```
 
 This will determine the root of the project for you. Ensure that the script is accessible when calling it on the first line (e.g., place it to `/user/local/bin` for simplicity, then remove the prefix `./`).
+
+Note: `convert_to_pdf.sh` relies on [Ghostscript](https://www.ghostscript.com/).
