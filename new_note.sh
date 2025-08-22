@@ -54,6 +54,26 @@ touch "$new_file"
 
 if [ -f "$new_file" ]; then
     echo "Created $new_file"
+    # TODO: add support for default template
+    # shift; RAW_TITLE="$@" # the title of the note (the 1..n arguments)
+    # echo   "---"                                  >  "$OUT_PATH" # this way, the file is initially created
+    # printf "title: $course - $RAW_TITLE\n"        >> "$OUT_PATH"
+    # printf "author: Michal Spano\n"               >> "$OUT_PATH"
+    # printf "date: $(date +%Y-%m-%d)\n"            >> "$OUT_PATH"
+    # printf "header-includes: |\n"                 >> "$OUT_PATH"
+    # printf "    \\\usepackage{fancyhdr}\n"        >> "$OUT_PATH"
+    # printf "    \\\pagestyle{fancy}\n"            >> "$OUT_PATH"
+    # printf "    \\\fancyhead[CO,CE]{$RAW_TITLE}\n" >> "$OUT_PATH"
+    # printf "    \\\fancyfoot[CO,CE]{\\\textsc{$NOTE_TYPE}, $(date +%Y)}\n" >> "$OUT_PATH"
+    # printf "    \\\fancyfoot[LE,RO]{\\\thepage}\n" >> "$OUT_PATH"
+    # printf "papersize: a4\n"                      >> "$OUT_PATH"
+    # printf "fontsize: 12pt\n"                     >> "$OUT_PATH"
+    # printf "colorlinks: true\n"                   >> "$OUT_PATH"
+    # printf "geometry: margin=1.5cm\n"             >> "$OUT_PATH"
+    # printf "output: pdf_document\n"               >> "$OUT_PATH"
+    # echo "---"                                    >> "$OUT_PATH"
+    # printf "\n## $RAW_TITLE\n\n"                  >> "$OUT_PATH"
+
 else
     echo "Error: Failed to create $new_file"
     exit 1
