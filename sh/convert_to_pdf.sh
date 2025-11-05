@@ -27,12 +27,12 @@ while [ $# -gt 0 ]; do
 done
 
 if [ -z "$key" ]; then
-    echo "Usage: $0 [--merge|-m] key"
+    echo "Usage: $0 [--merge|-m] course_code"
     exit 1
 fi
 
-level_root=$(./find_root.sh) || { echo "Error: Failed to run find_root.sh"; exit 1; }
-[ -n "$level_root" ]         || { echo "Error: No name returned by find_root.sh"; exit 1; }
+level_root=$(find_root.sh) || { echo "Error: Failed to run find_root.sh"; exit 1; }
+[ -n "$level_root" ]       || { echo "Error: No name returned by find_root.sh"; exit 1; }
 
 json_file=$level_root/courses.json
 
